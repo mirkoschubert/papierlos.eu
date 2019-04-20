@@ -30,10 +30,14 @@ const buildSass = () => {
 
 const buildPug = () => {
   return gulp.src('src/content/**/*.pug')
-  .pipe(pug({ basedir: 'src/layouts' }))
-  .pipe(size({ title: 'Built:', showFiles: true }))
-  .pipe(gulp.dest('build/'))
-  .pipe(connect.reload())
+    .pipe(pug({
+      basedir: 'src/layouts',
+      data: require('./.config.json'),
+      pretty: true
+    }))
+    .pipe(size({ title: 'Built:', showFiles: true }))
+    .pipe(gulp.dest('build/'))
+    .pipe(connect.reload())
 }
 
 // Server

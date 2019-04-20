@@ -1,0 +1,6 @@
+{
+  "site": {
+    "base": "http://localhost:3000",
+    "title": "Papierlos"
+  }
+}
