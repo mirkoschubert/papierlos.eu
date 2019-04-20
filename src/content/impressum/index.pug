@@ -1,4 +1,28 @@
 extends /base
 
+include /elements/hero
+
+block hero
+  +hero('Impressum', 'Anbieterkennzeichnung')
+
 block content
-  h1 Impressum
+  section.section
+    .container
+      h4 Angaben gemäß §5 TMG
+      p #[strong Mirko Schubert]#[br]Anzengruberstr. 28#[br]21079 Hamburg
+      h5 Kontakt
+      p #[strong Tel: ]+49 174 6057248#[br]#[strong Fax: ]+49 3222 3359121#[br]#[strong Fax: ]+49 3222 3359121#[br]#[strong Mail: ]#[a(href='mailto:office@mirkoschubert.de') office@mirkoschubert.de]
+      p Du kannst E-Mails an mich auch mit PGP verschlüsseln.
+      p #[strong Fingerprint: ]0E47 02A9 E550 6C4D 35CD 3523 1411 0F3D 8B09 7056
+      p Kleingewerbe nach §19 UStG
+      h4 Verantwortlich für den Inhalt nach §55 Abs. 2 RStV
+      p Mirko Schubert (Anschrift siehe oben)
+      h4 Quellenangaben für die verwendeten Bilder & Grafiken
+      p Alle Fotos, wenn nicht anders gekennzeichnet, stammen von #[a(href='https://unsplash.com' target='_blank') unsplash.com] und sind nach #[a(href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank') Creative Commons Zero] (CC0) lizenziert.
+      h4 Grafikdesign
+      p Das Urheberrecht für das Grafikdesign von papierlos.eu liegt bei Mirko Schubert.
+      h4 Amazon Partnerprogramm
+      p Als Amazon-Partner verdiene ich an qualifizierten Käufen.
+      h4 Urheberschutz
+      p Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Webseiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Das Herunterladen sowie Kopieren dieser Webseite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+

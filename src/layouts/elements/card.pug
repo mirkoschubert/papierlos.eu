@@ -1,0 +1,10 @@
+include /elements/picture
+include /elements/button
+
+mixin card(data)
+  .item.card
+    .image
+      +picture(data.image.slug, data.image.alt, data.image.author, data.image.url)
+    h4
+      a(href=data.to)= data.title
+    p= data.excerpt

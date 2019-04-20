@@ -14,7 +14,8 @@ html(lang='de')
     block header
       include /components/navbar
     block hero
-      include /components/hero
+      include /elements/hero
+      +hero(site.title, site.description)
     block content
       h1 Title
     block footer

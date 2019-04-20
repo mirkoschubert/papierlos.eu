@@ -17,7 +17,6 @@
   flex-wrap: wrap
   justify-content: center
 
-
 .grid
   .item
     flex: 1
@@ -47,9 +46,26 @@
     &.right + .item.image
       order: -1
 
+    &.card
+      flex-basis: 100%
+      margin-bottom: 3rem
+
+      .image
+        margin-left: -2rem
+        margin-right: -2rem
+
+      h4
+        a
+          color: #ffffff
+          text-decoration: none
+
+          &:hover
+            color: #f1bd1f
 
     h3
       margin: .75rem 0
+
+
 
 .night
   .grid
@@ -77,11 +93,22 @@
         margin-left: -6rem
         margin-right: -6rem
 
+      &.card
+        .image
+          margin-left: -6rem
+          margin-right: -6rem
+
 @media screen and (min-width: 800px)
   .grid,
   .grid > .container
     align-items: center
     flex-wrap: nowrap
+
+  .grid.cards,
+  .grid.cards > .container
+    align-items: flex-start
+    flex-wrap: wrap
+    justify-content: flex-start
 
   .grid
     &.with-spacing
@@ -97,6 +124,10 @@
         &.right + .item.image
           order: 2
 
+    &.cards
+      .item:nth-child(2n)
+        margin-right: 0
+
     .item
       flex-basis: 50%
 
@@ -110,6 +141,13 @@
         margin-left: 0
         margin-right: 0
 
+      &.card
+        flex: 0 1 calc(50% - 1.6rem)
+
+        .image
+          margin-left: 0
+          margin-right: 0
+
 
 @media screen and (min-width: 1080px)
   .container
@@ -118,6 +156,18 @@
     padding: 0
     position: relative
     width: 960px
+
+  .grid
+    &.cards
+      .item
+        &:nth-child(2n)
+          margin-right: 3rem
+
+        &:nth-child(3n)
+          margin-right: 0
+
+        &.card
+          flex: 0 1 calc(33.33% - 2rem)
 
 @media screen and (min-width: 1200px)
   .container

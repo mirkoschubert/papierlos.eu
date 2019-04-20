@@ -1,0 +1,6 @@
+mixin picture(slug, alt, author, author_link)
+  picture
+    source(srcset='/assets/img/' + slug + '.webp, /assets/img/' + slug + '@2x.webp 2x' type='image/webp')
+    source(srcset='/assets/img/' + slug + '.jpg, /assets/img/' + slug + '@2x.jpg 2x' type='image/jpeg')
+    img(srcset='/assets/img/' + slug + '.jpg, /assets/img/' + slug + '@2x.jpg 2x' src='assets/img/' + slug + '.jpg' alt=alt)
+    cite &copy; #[a(href=author_link target='_blank' rel='noopener noreferrer' title='Unsplash')= author]

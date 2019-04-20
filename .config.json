@@ -1,6 +1,7 @@
 {
   "site": {
     "base": "http://localhost:3000",
-    "title": "Papierlos"
+    "title": "Papierlos",
+    "description": "Alles rund um das papierlose Büro"
   }
 }
