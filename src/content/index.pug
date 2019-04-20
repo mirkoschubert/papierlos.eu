@@ -1,4 +1,70 @@
-extends /index
+extends /base
 
 block content
-  h1 Papierlos mit index
+  section.section.grid.with-spacing
+    .container
+      .item.center.narrow
+        p.tagline Schneller Tipp
+        h3 Lerne den Umgang mit digitalen Dokumenten kennen!
+        p.
+          Wenn das papierlose Büro eingerichtet ist, aber dennoch viel Papier durch das Büro wandert, solltest Du und Deine Mitarbeiter lernen, mit dem neuen Medium umzugehen. Viele Einsteiger machen den Fehler, trotzdem noch jede E-Mail auszudrucken oder mit Geschäftspartnern nicht die digitale Version des Dokuments auszutauschen.
+
+  section.section.grid.with-spacing
+    .container
+      .item.image
+        picture
+          source(srcset='/assets/img/knowledge.webp, /assets/img/knowledge@2x.webp 2x' type='image/webp')
+          source(srcset='/assets/img/knowledge.jpg, /assets/img/knowledge@2x.jpg 2x' type='image/jpeg')
+          img(srcset='/assets/img/knowledge.jpg, /assets/img/knowledge@2x.jpg 2x' src='assets/img/knowledge.jpg' alt='Wissen')
+        cite &copy;&nbsp;
+          a(href='https://unsplash.com/@eliabevces' target='_blank' rel='noopener noreferrer' title='Unsplash') Eliabe Costa
+      .item
+        h4 Wissensdatenbank
+        p.
+          Damit Du Dir ein papierloses Büro aufbauen kannst, benötigst Du einige praktische und rechtliche Grundlagen. Ziel ist es, Dich an Deinem Kenntnisstand abzuholen und Dir einfache bis individuelle Lösungen zu bieten, damit Du künfig privat oder geschäftlich weniger Papier verwenden musst.
+        a.button.right(role='button' href='/wissen/' class='button right') Jetzt informieren
+
+  section.section.grid.with-spacing
+    .container
+      .item.right
+        h4 Hardware
+        p.
+          In dieser Rubrik geht es um die Wahl des richtigen Dokumentenscanners, Druckers sowie einer Speicherlösung, um die Dokumente in Deinem papierlosen Büro langfristig sicher zu archivieren. Wir empfehlen Dir verschiedene Produkte nach Budget und Know How.
+        a.button.right(role='button' href='/hardware/') Jetzt ansehen
+      .item.image
+        picture
+          source(srcset='/assets/img/harddrive.webp, /assets/img/harddrive@2x.webp 2x' type='image/webp')
+          source(srcset='/assets/img/harddrive.jpg, /assets/img/harddrive@2x.jpg 2x' type='image/jpeg')
+          img(srcset='/assets/img/harddrive.jpg, /assets/img/harddrive@2x.jpg 2x' src='assets/img/harddrive.jpg' alt='Hardware')
+        cite &copy;&nbsp;
+          a(href='https://unsplash.com/@heapdump' target='_blank' rel='noopener noreferrer' title='Unsplash') Patrick Lindenberg
+
+  section.section.grid.with-spacing
+    .container
+      .item.image
+        picture
+          source(srcset='/assets/img/discs.webp, /assets/img/discs@2x.webp 2x' type='image/webp')
+          source(srcset='/assets/img/discs.jpg, /assets/img/discs@2x.jpg 2x' type='image/jpeg')
+          img(srcset='/assets/img/discs.jpg, /assets/img/discs@2x.jpg 2x' src='assets/img/discs.jpg' alt='Sortware')
+        cite &copy;&nbsp;
+          a(href='https://unsplash.com/@brett_jordan' target='_blank' rel='noopener noreferrer' title='Unsplash') Brett Jordan
+      .item
+        h4 Software
+        p.
+          Damit Du die gescannten Dokumente richtig einordnen kannst, solltest Du Dir eine Dokumentenverwaltungs-Software (DMS) zulegen. Alternativ kannst Du Dir mit entsprechender Erfahrung auch viele Prozesse mithilfe von Open-Source-Programmen selbst zusammen stellen.
+        a.button.right(role='button' href='/hardware/') Jetzt ausprobieren
+
+  section.section.grid.with-spacing
+    .container
+      .item.right
+        h4 Services
+        p.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci accusantium facere, quibusdam sequi ullam quaerat modi quod molestiae, alias amet ratione ea delectus repellendus cumque a vitae illo non rem.
+        a.button.right(role='button' href='/services/' class='button right') Jetzt testen
+      .item.image
+        picture
+          source(srcset='/assets/img/service.webp, /assets/img/service@2x.webp 2x' type='image/webp')
+          source(srcset='/assets/img/service.jpg, /assets/img/service@2x.jpg 2x' type='image/jpeg')
+          img(srcset='/assets/img/service.jpg, /assets/img/service@2x.jpg 2x' src='assets/img/service.jpg' alt='Services')
+        cite &copy;&nbsp;
+          a(href='https://unsplash.com/@lefterisk' target='_blank' rel='noopener noreferrer' title='Unsplash') Lefteris Kallergis

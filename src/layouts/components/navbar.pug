@@ -1,0 +1,22 @@
+header.header.fixed-top
+  .row
+    .item.left.burger
+      a.icon.burger-icon(role='button', aria-label='menu', aria-expanded='false')
+        svg
+          use(xlink:href='/assets/icons/sprites.svg#menu')-//
+    nav.item.left.main-nav
+      a(href='/') Start
+      a(href='/wissen/') Wissen
+      a(href='/hardware/') Hardware
+      a(href='/software/') Software
+      a(href='/services/') Services
+    .item.center.title
+      h3.site-title
+        a(href='/')= site.title
+    .item.right.options
+      a.icon.search-icon(role='button')
+        svg
+          use(xlink:href='/assets/icons/sprites.svg#search')
+      a.icon.mode-icon(role='button')
+        svg
+          use(xlink:href='/assets/icons/sprites.svg#night')

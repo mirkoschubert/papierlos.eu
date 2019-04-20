@@ -1,0 +1,125 @@
+.container
+  padding: 0 2rem
+
+.section
+  padding: 3rem 0
+
+  &.medium
+    padding: 9rem 0
+
+  &.large
+    padding: 18rem 0
+
+.grid,
+.grid > .container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+
+
+.grid
+  .item
+    flex: 1
+    flex-basis: 100%
+    width: 100%
+
+    &.narrow
+      width: 100%
+
+    &.with-padding
+      padding: 0 2rem
+
+    &.right
+      text-align: left
+
+    &.image
+      background-color: #f1bd1f
+      margin-left: -2rem
+      margin-right: -2rem
+
+    &.yellow
+      background-color: #f1bd1f
+
+    &.white
+      background-color: #ffffff
+
+    &.right + .item.image
+      order: -1
+
+
+    h3
+      margin: .75rem 0
+
+.night
+  .grid
+    .item
+      &.white
+        background-color: #15202a
+
+@media screen and (min-width: 420px)
+  .grid
+    .item
+      &.narrow
+        flex-basis: 100%
+        max-width: 100%
+
+@media screen and (min-width: 640px)
+  .container
+    padding: 0 6rem
+
+  .grid
+    .item
+      &.narrow
+        max-width: 75%
+
+      &.image
+        margin-left: -6rem
+        margin-right: -6rem
+
+@media screen and (min-width: 800px)
+  .grid,
+  .grid > .container
+    align-items: center
+    flex-wrap: nowrap
+
+  .grid
+    &.with-spacing
+      .item
+        margin-right: 3rem
+
+        &.image
+          margin-right: 3rem
+
+        &:last-child
+          margin-right: 0
+
+        &.right + .item.image
+          order: 2
+
+    .item
+      flex-basis: 50%
+
+      &.narrow
+        max-width: 50%
+
+      &.right
+        text-align: right
+
+      &.image
+        margin-left: 0
+        margin-right: 0
+
+
+@media screen and (min-width: 1080px)
+  .container
+    margin: 0 auto
+    max-width: 960px
+    padding: 0
+    position: relative
+    width: 960px
+
+@media screen and (min-width: 1200px)
+  .container
+    max-width: 1160px
+    width: 1160px

@@ -1,0 +1,162 @@
+.header
+  background-color: transparent
+  height: 60px
+  padding: 0 2em
+  transition: background-color .4s linear
+  width: 100%
+
+  &.fixed-top
+    left: 0
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 20
+
+  &.fixed-bottom
+    bottom: 0
+    left: 0
+    position: fixed
+    right: 0
+    z-index: 20
+
+  &.scrolled
+    background-color: $bg-color
+
+  .row
+    align-items: center
+    display: flex
+    flex-flow: row nowrap
+    height: 60px
+
+  .item
+    align-items: center
+    display: flex
+    flex: 1
+
+  .main-nav
+    background: transparent
+    display: none
+    flex-direction: column
+    height: calc(100vh - 60px)
+    justify-content: center
+    left: 0
+    padding: 3rem 0
+    position: absolute
+    top: 60px
+    transition: background-color .2s linear
+    width: 100%
+
+    &.active
+      background-color: $bg-color
+      display: flex
+      opacity: .9
+
+    a
+      border-radius: 2px
+      color: #1c2937
+      font-size: 1.5rem
+      margin: 1rem auto
+      padding: 4px 8px
+      text-align: center
+      text-decoration: none
+
+      &:hover
+        background-color: $nav-button-inverted
+        color: $text-color-inverted
+
+  .site-title
+    font-size: 1.17rem
+    margin: 0
+
+    a
+      border-radius: 2px
+      color: #10171d
+      font-weight: 500
+      padding: 4px 8px
+      text-decoration: none
+      text-transform: uppercase
+
+      &:hover
+        background-color: $nav-button-inverted
+        color: $text-color-inverted
+
+  .icon
+    background: inherit
+    border: inherit
+    border-radius: 2px
+    cursor: pointer
+    line-height: 16px
+    padding: 4px 8px
+
+    &:hover
+      background-color: $nav-button-inverted
+
+      svg
+        fill: $text-color-inverted
+
+    svg
+      fill: #10171d
+      height: 20px
+      width: 20px
+
+.night
+  .header
+    .main-nav
+      &.active
+        background-color: #10171d
+
+      a
+        color: #10171d
+
+        &:hover
+          background-color: #38444d
+          color: #ffffff
+
+    &.scrolled
+      background-color: #1c2937
+
+      a
+        color: #8899a5
+
+        &:hover
+          background-color: #10171d
+
+      .site-title
+        a
+          color: #ffffff
+
+      .icon
+        &:hover
+          svg
+            fill: #ffffff
+
+        svg
+          fill: #8899a5
+
+
+@media screen and (min-width: 800px)
+  .header
+    .burger
+      display: none
+
+    .main-nav
+      background: transparent
+      display: flex
+      flex-direction: row
+      height: inherit
+      justify-content: flex-start
+      left: inherit
+      opacity: 1
+      padding: 0
+      position: relative
+      top: inherit
+      width: inherit
+
+      &.active
+        background-color: transparent
+
+      a
+        color: #10171d
+        font-size: 1rem
+        font-weight: normal
+        margin: 0 .75rem 0 0

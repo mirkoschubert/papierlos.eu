@@ -14,7 +14,7 @@ const clean = () => {
 // copy static assets
 const copyAssets = () => {
   return gulp.src('src/assets/**/*')
-    .pipe(size({ title: 'Built:', showFiles: true }))
+    .pipe(size({ title: 'Copied:', showFiles: true }))
     .pipe(gulp.dest('build/assets/'))
     .pipe(connect.reload())
 }
