@@ -1,0 +1,43 @@
+extends /base
+
+include /elements/hero
+include /elements/picture
+include /elements/toc
+
+block hero
+  +hero('Wozu eigentlich ein papierloses Büro?', 'Nutzen, Vor- und Nachteile')
+
+block content
+  section.grid.with-aside
+    .container
+      aside.toc
+        +toc()
+      article.with-toc
+        //-.image
+          +picture('discs', 'Software', 'Brett Jordan', 'https://unsplash.com/@brett_jordan')
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias quidem aliquam cumque. Ipsam similique animi earum quaerat neque dolorum iste, provident vero totam libero molestiae, quas nostrum, tenetur iusto.
+        h3#erster Erster Eintrag
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam quis unde iste commodi ea! Tempore illo eum, beatae autem a mollitia ab nesciunt excepturi obcaecati dolor provident id ut corrupti.
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad dolore hic impedit perferendis animi itaque saepe amet repudiandae, voluptate pariatur quam architecto. Assumenda doloremque amet accusamus vitae corporis? Perspiciatis, voluptate.
+        h3#zweiter Zweiter Eintrag
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus nulla culpa saepe maiores aliquid velit nostrum doloribus, unde ipsum dolore voluptatibus reprehenderit expedita repudiandae. Inventore explicabo fugit officiis maxime iste.
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt iure pariatur ut temporibus et culpa consectetur necessitatibus! Delectus pariatur necessitatibus quis, laudantium ullam sapiente dignissimos id illum nesciunt nam ipsum!
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam accusantium et, quaerat facere, consequatur iure eos fuga voluptates similique pariatur vitae facilis nemo inventore eligendi delectus adipisci amet? Sapiente, sed?
+        h4#erster-unter Erster Untereintrag
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora optio quisquam voluptatibus quae sapiente excepturi est sit. Harum voluptate est labore dolorum quisquam odit quaerat, assumenda molestiae fugit ad temporibus.
+        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste consectetur voluptatibus quam maxime, id natus sint itaque exercitationem illum eveniet debitis, fuga facilis possimus dolore? Perferendis natus accusantium et cupiditate?
+        h4#zweiter-unter Zweiter Untereintrag mit einer gaaaaanz langen Überschrift
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae facere inventore repudiandae maxime laboriosam, cupiditate fugiat nihil temporibus veritatis ab qui alias fugit vel molestiae nulla optio enim magnam. Optio.
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sit rem, ratione, quidem earum iste eaque omnis sequi voluptate ea porro totam minus natus aut odio. Accusantium qui aliquam nobis!
+        h3#dritter Dritter Eintrag
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci numquam veniam eum dolores iure provident soluta pariatur ipsum corporis quisquam molestias quam voluptatem aliquid voluptatum voluptate labore, vero eius ut.
+        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis incidunt corrupti architecto magni, perspiciatis nemo aliquam minus at quae enim voluptate facilis quas doloremque. Officiis quisquam placeat veritatis eaque ipsa!
+        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, doloribus asperiores id molestias pariatur reiciendis facere minima a dignissimos saepe maxime labore iusto tempore quos dolorum consequuntur praesentium inventore blanditiis.
+        h3#vierter Vierter Eintrag
+        h4#erster-unter-vier Erster Untereintrag
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis eveniet ea libero, modi in perspiciatis expedita autem dolores, earum dignissimos, repudiandae voluptate nemo alias delectus beatae blanditiis magnam dolorum mollitia!
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis amet officiis aut, dolore, quia ipsam mollitia delectus itaque minima, dolores earum obcaecati. Veritatis deserunt in dolorem laboriosam neque minima adipisci.
+        h3#fuenfter Fünfter Eintrag
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et porro perferendis cumque neque omnis quaerat dolorum mollitia veniam nobis magnam dolorem explicabo accusamus laboriosam nulla saepe odit sint, eos dolores.
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo consequatur recusandae architecto saepe exercitationem. Quasi eos incidunt deserunt rem debitis animi quam, odio ut aspernatur voluptatem esse aperiam unde. Deserunt.
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem adipisci debitis quos, aliquid officia quia iure incidunt fuga modi, sequi magni provident recusandae similique tenetur dolore vitae ab aspernatur repellendus!

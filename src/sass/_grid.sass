@@ -10,14 +10,26 @@
   &.large
     padding: 18rem 0
 
-.grid,
-.grid > .container
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  justify-content: center
-
 .grid
+  & > .container
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+
+  &.with-aside
+    & > .container
+      align-items: flex-start
+      flex-direction: column
+      flex-wrap: wrap
+
+    aside
+      flex: 0 1 auto
+      width: 100%
+
+    article
+      flex: 1
+
   .item
     flex: 1
     flex-basis: 100%
@@ -53,14 +65,6 @@
       .image
         margin-left: -2rem
         margin-right: -2rem
-
-      h4
-        a
-          color: #ffffff
-          text-decoration: none
-
-          &:hover
-            color: #f1bd1f
 
     h3
       margin: .75rem 0
@@ -99,18 +103,11 @@
           margin-right: -6rem
 
 @media screen and (min-width: 800px)
-  .grid,
-  .grid > .container
-    align-items: center
-    flex-wrap: nowrap
-
-  .grid.cards,
-  .grid.cards > .container
-    align-items: flex-start
-    flex-wrap: wrap
-    justify-content: flex-start
-
   .grid
+    & > .container
+      align-items: center
+      flex-wrap: nowrap
+
     &.with-spacing
       .item
         margin-right: 3rem
@@ -125,6 +122,11 @@
           order: 2
 
     &.cards
+      & > .container
+        align-items: flex-start
+        flex-wrap: wrap
+        justify-content: flex-start
+
       .item:nth-child(2n)
         margin-right: 0
 
@@ -158,6 +160,19 @@
     width: 960px
 
   .grid
+    &.with-aside
+      & > .container
+        flex-direction: row
+        flex-wrap: wrap
+
+      aside
+        flex: 0 1 auto
+        margin-right: 3rem
+        width: 20%
+
+      article
+        width: 80%
+
     &.cards
       .item
         &:nth-child(2n)

@@ -1,28 +1,29 @@
 extends /base
 
 include /elements/hero
-include /elements/picture
-include /elements/button
 include /elements/card
 
 block hero
   +hero('Wissen', 'Anleitungen zum digitalen Büro')
 
 block content
-  section.section.grid.with-spacing
-    .container
-      .item.center.narrow
-        p.tagline Schneller Tipp
-        h3 Wozu überhaupt ein papierloses Büro?
-        p Das papierlose Büro hat viele Vorteile. Zu allererst trägst Du einen Beitrag zur Umwelt bei, indem Du jede Menge Papier sparst. Du wirst aber auch Dein Unternehmen voran bringen, schnellere Workflows entwickeln und Prozesse optimieren. Auch im privaten Umfeld kann es sehr erleichternd sein, weniger Zeit mit dem Sortieren Deiner Unterlagen zu verbringen.
-        +button('Mehr erfahren', '/')
-
   section.section.grid.with-spacing.cards
     .container
       +card({
-        title: 'Das ist ein erster Artikel',
+        title: 'Wozu überhaupt ein papierloses Büro?',
         excerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti aperiam cupiditate natus distinctio est assumenda, veritatis aut modi veniam, consequuntur mollitia corporis id dicta temporibus earum inventore rem aspernatur.',
-        to: '/',
+        to: '/wissen/wozu-ein-papierloses-buero/',
+        image: {
+          slug: 'discs',
+          alt: 'Software',
+          author: 'Brett Jordan',
+          url: 'https://unsplash.com/@brett_jordan'
+        }
+      })
+      +card({
+        title: 'Welche Vorteile hat das papierlose Büro?',
+        excerpt: 'In diesem Artikel beschäftige ich mich mit den Vorteilen, die ein papierloses Büro mit sich bringen kann.',
+        to: '/wissen',
         image: {
           slug: 'knowledge',
           alt: 'Wissen',
@@ -31,9 +32,9 @@ block content
         }
       })
       +card({
-        title: 'Das ist der zweite Artikel',
+        title: 'Hat das papierlose Büro auch Nachteile?',
         excerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti aperiam cupiditate natus distinctio est assumenda, veritatis aut modi veniam, consequuntur mollitia corporis id dicta temporibus earum inventore rem aspernatur.',
-        to: '/hardware',
+        to: '/wissen',
         image: {
           slug: 'harddrive',
           alt: 'Hardware',
@@ -42,9 +43,9 @@ block content
         }
       })
       +card({
-        title: 'Das ist der dritte Artikel mit einer längeren Überschrift',
+        title: 'Aufbewahrungsfristen: Welche Dokumente Du nicht wegwerfen darfst',
         excerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti aperiam cupiditate natus distinctio est assumenda, veritatis aut modi veniam, consequuntur mollitia corporis id dicta temporibus earum inventore rem aspernatur.',
-        to: '/services',
+        to: '/wissen',
         image: {
           slug: 'service',
           alt: 'Services',
@@ -52,13 +53,22 @@ block content
           url: 'https://unsplash.com/@lefterisk'
         }
       })
-      .item.card
-        .image
-          +picture('discs', 'Software', 'Brett Jordan', 'https://unsplash.com/@brett_jordan')
-        h4 Und nun der vierte Artikel
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores adipisci laboriosam corporis distinctio itaque delectus qui dolorem reprehenderit incidunt aliquid voluptatum, tempore molestiae, facere exercitationem cum explicabo perspiciatis consequatur officia!
-      .item.card
-        .image
-          +picture('knowledge', 'Wissen', 'Eliabe Costa', 'https://unsplash.com/@eliabevces')
-        h4 Erst jetzt der fünfte Artikel
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores adipisci laboriosam corporis distinctio itaque delectus qui dolorem reprehenderit incidunt aliquid voluptatum, tempore molestiae, facere exercitationem cum explicabo perspiciatis consequatur officia!
+      +card({
+        title: 'Wie funktioniert ersetzendes Scannen?',
+        excerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti aperiam cupiditate natus distinctio est assumenda, veritatis aut modi veniam, consequuntur mollitia corporis id dicta temporibus earum inventore rem aspernatur.',
+        to: '/wissen',
+        image: {
+          slug: 'discs',
+          alt: 'Software',
+          author: 'Brett Jordan',
+          url: 'https://unsplash.com/@brett_jordan'
+        }
+      })
+
+  section.section.grid.with-spacing
+    .container
+      .item.center.narrow
+        p.tagline Schneller Tipp
+        h3 Wozu überhaupt ein papierloses Büro?
+        p Das papierlose Büro hat viele Vorteile. Zu allererst trägst Du einen Beitrag zur Umwelt bei, indem Du jede Menge Papier sparst. Du wirst aber auch Dein Unternehmen voran bringen, schnellere Workflows entwickeln und Prozesse optimieren. Auch im privaten Umfeld kann es sehr erleichternd sein, weniger Zeit mit dem Sortieren Deiner Unterlagen zu verbringen.
+        +button('Mehr erfahren', '/')
