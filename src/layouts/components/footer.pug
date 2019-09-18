@@ -1,4 +1,52 @@
+include /elements/button
+
 footer.footer
-  .container
-    p.
-      &copy; 2019 by Mirko Schubert. All rights reserved. | #[a(href="/impressum") Impressum] | #[a(href="/datenschutz") Datenschutz] | #[a(href="/kontakt") Kontakt]
+  section.section.cta.center
+    .container
+      h4 Noch Fragen?
+      p Solltest Du eine spezielle Frage haben, die auf unserer Webseite leider unbeantwortet geblieben ist, besuche doch einfach unsere gleichnamige Facebook-Gruppe! Dort kannst Du mit Gleichgesinnten diskutieren und Dich mit Experten austauschen.
+      +button('Facebook-Gruppe besuchen', 'https://www.facebook.com/groups/2301428466801656/', true, true) 
+
+  .headline
+    .container
+      h5 Übersicht
+
+  section.section.grid.with-spacing.links
+    .container
+      .item
+        h6: a(href="/wissen/") Wissen
+        ul.footer-links
+          li: a(href="#") Vorteile &amp; Ziele
+          li: a(href="#") Aufbewahrungsfristen
+          li: a(href="#") Ersetzendes Scannen
+          li: a(href="#") DIY Archivierung
+          li: a(href="#") Automatisierung
+          li: a(href="#") Datensicherheit
+      .item
+        h6: a(href="/hardware/") Hardware
+        ul.footer-links
+          li: a(href="#") Dokumentenscanner
+          li: a(href="#") Drucker
+          li: a(href="#") Speicherlösungen
+          li: a(href="#") NAS-Festplatten
+          li: a(href="#") Langzeit-Archivierung
+      .item
+        h6: a(href="/software/") Software
+        ul.footer-links
+          li: a(href="#") Was ist ein DMS
+          li: a(href="#") DMS Vergleichstest
+          li: a(href="#") Belege sammeln
+          li: a(href="#") Archivierungssoftware
+      .item
+        h6: a(href="/services/") Services
+        ul.footer-links
+          li: a(href="#") Digitaler Steuerberater
+          li: a(href="#") VPN-Anbieter
+          li: a(href="#") Cloud-Anbieter
+          li: a(href="#") Post digitalisieren
+          li: a(href="#") Datenrettung
+
+  .legal
+    .container
+      p.
+        &copy; 2019 by Mirko Schubert. All rights reserved. | #[a(href="/impressum") Impressum] | #[a(href="/datenschutz") Datenschutz] | #[a(href="/kontakt") Kontakt]

@@ -1,6 +1,66 @@
 extends /base
 
 include /elements/hero
+include /elements/card
 
 block hero
   +hero('Hardware', 'Scanner, Drucker, Speicherlösungen')
+
+block content
+  section.section.grid.with-spacing.cards
+    .container
+      +card({
+        title: 'Die besten Dokumentenscanner',
+        excerpt: 'Damit Du Deine Unterlagen effizient digitalisieren kannst, benötigst Du einen schnellen und zuverlässigen Dokumentenscanner. Eine Auswahl.',
+        to: '/hardware/die-besten-dokumentenscanner/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Gute Drucker für das papierlose Büro',
+        excerpt: 'Moment mal - ein Drucker für das papierlose Büro? Warum er dennoch wichtig ist und welche dafür geeignet sind, erfährst Du hier.',
+        to: '/hardware/gute-drucker-papierloses-buero/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'NAS Speicherlösungen für den geschäftlichen Alltag',
+        excerpt: 'Damit Deine Daten sicher archiviert werden können, benötigst Du eine gute Speicherlösung. Ich stelle Dir verschiedene NAS-Systeme vor.',
+        to: '/hardware/nas-speicherloesungen-geschaeftlicher-alltag/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Die beste Festplatte für Dein NAS',
+        excerpt: 'Nicht jede Festplatte ist für NAS- oder Storage-Server geeignet. Für die maximale Datensicherheit benötigst Du eine HDD, die viel aushält.',
+        to: '/hardware/beste-festplatte-fuer-nas/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Medien für die Langzeit-Archivierung',
+        excerpt: 'Für die Langzeitarchivierung benötigst Du eine Speicher-Lösung, die eine erhöhte Lebensdauer aufweist. Diese Systeme gibt es.',
+        to: '/hardware/medien-fuer-langzeit-archivierung/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })

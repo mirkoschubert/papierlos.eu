@@ -1,2 +1,11 @@
-mixin button(name, to)
-  a.button(role='button' href=to)= name
+mixin button(name, to, dark=false, blank=false)
+  if dark
+    if blank
+      a.button.dark(role='button' href=to target='_blank')= name
+    else
+      a.button.dark(role='button' href=to)= name
+  else
+    if blank
+      a.button(role='button' href=to target='_blank')= name
+    else
+      a.button(role='button' href=to)= name

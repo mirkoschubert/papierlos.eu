@@ -1,6 +1,66 @@
 extends /base
 
 include /elements/hero
+include /elements/card
 
 block hero
   +hero('Services', 'Dienstleister, die Dir das Leben vereinfachen')
+
+block content
+  section.section.grid.with-spacing.cards
+    .container
+      +card({
+        title: 'Der digitale Steuerberater',
+        excerpt: 'Damit Du auch beim Finanzamt papierlos bleibst, ist es ratsam, sich auch bei der Wahl des Steuerberaters an digitalen Anbietern zu orientieren.',
+        to: '/services/der-digitale-steuerberater/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Daten sicher übertragen dank VPN',
+        excerpt: 'Ob unterwegs oder im Büro - ein virtuelles privates Netzwerk (VPN) hilft Dir dabei, Daten über das Internet sicher zu übertragen.',
+        to: '/services/daten-sicher-uebertragen-vpn/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Welcher Cloud-Anbieter ist der sicherste?',
+        excerpt: 'Sicherheit und Datenschutz sollten auch unterwegs groß geschrieben werden. Die besten Cloud-Anbieter für das papierlose Büro.',
+        to: '/services/cloud-anbieter-sicher/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Vergleichstest: Analoge Post digital erhalten',
+        excerpt: 'Ist Dir das Scannen analoger Post zu mühsam? Einige Anbieter können das für Dich übernehmen und Dir viel Arbeit ersparen!',
+        to: '/services/vergleichstest-analoge-post-digitalisieren/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Datenrettung: Diese Firmen übernehmen das für Dich',
+        excerpt: 'Trotz äußerster Sorgfalt kann es vorkommen, dass eine Festplatte abraucht und Deine Daten in Gefahr bringt. Diese Unternehmen helfen Dir bei der Datenrettung.',
+        to: '/services/datenrettung-anbieter/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })

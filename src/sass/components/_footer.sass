@@ -1,8 +1,6 @@
 .footer
   background-color: #1c2937
   margin-top: 3rem
-  padding: 3rem 0 6rem
-  text-align: center
 
   p
     color: #8899a5
@@ -14,8 +12,83 @@
     &:hover
       color: #f1bd1f
 
+  .headline
+    display: block
+    padding: 2.5rem 0 0
+    text-align: center
+
+    h5
+      color: #8899a5
+      margin: 0
+
+  .links
+    padding: 1.5rem 0
+    text-align: center
+
+    & > .container
+      align-items: flex-start
+      justify-content: flex-start
+
+    h6
+      color: #8899a5
+      margin: .5rem 0
+
+    .footer-links
+      font-size: .85rem
+      padding-left: 0
+
+      ul
+        margin-bottom: 1rem
+        padding-left: 1rem
+
+      li
+        list-style: none
+
+        a
+          color: #8899a5
+
+          &:hover
+            color: #f1bd1f
+
+
+  .legal
+    background-color: #10171d
+    padding: .5rem 0
+    text-align: center
+
 
 
 .night
   .footer
     background-color: #15202a
+
+
+@media screen and (min-width: 420px)
+  .footer
+    .headline
+      text-align: left
+
+    .links
+      text-align: left
+
+      &.with-spacing
+        .item
+          flex-basis: 43%
+          margin-right: 3rem
+
+          &:nth-child(2n)
+            margin-right: 0
+
+
+@media screen and (min-width: 800px)
+  .footer
+    .links
+      &.with-spacing
+        .item
+          flex-basis: 25%
+
+          &:nth-child(2n)
+            margin-right: 3rem
+
+          &:last-child
+            margin-right: 0

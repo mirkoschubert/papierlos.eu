@@ -4,23 +4,19 @@
   padding: 0 2em
   transition: background-color .4s linear
   width: 100%
+  z-index: 200
 
   &.fixed-top
     left: 0
     position: fixed
     right: 0
     top: 0
-    z-index: 20
 
   &.fixed-bottom
     bottom: 0
     left: 0
     position: fixed
     right: 0
-    z-index: 20
-
-  &.scrolled
-    background-color: $bg-color
 
   .row
     align-items: center
@@ -34,51 +30,53 @@
     flex: 1
 
   .main-nav
-    background: transparent
-    display: none
+    align-items: flex-start
+    background: #eef1f2
+    display: flex
     flex-direction: column
     height: calc(100vh - 60px)
-    justify-content: center
+    justify-content: flex-start
     left: 0
-    padding: 3rem 0
+    opacity: 0
+    padding: 0
     position: absolute
     top: 60px
-    transition: background-color .2s linear
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out
+    visibility: hidden
     width: 100%
+    z-index: 100
 
     &.active
-      background-color: $bg-color
-      display: flex
-      opacity: .9
+      opacity: 1
+      visibility: visible        
 
     a
-      border-radius: 2px
-      color: #1c2937
+      color: #10171d
       font-size: 1.5rem
-      margin: 1rem auto
-      padding: 4px 8px
+      height: 25%
+      line-height: 32px
+      padding: calc(12.5vh - 32px) 0
       text-align: center
-      text-decoration: none
+      width: 100%
 
       &:hover
-        background-color: $nav-button-inverted
-        color: $text-color-inverted
+        background-color: #d9dee2
 
   .site-title
     font-size: 1.17rem
     margin: 0
 
     a
+      background-color: #15202a
       border-radius: 2px
-      color: #10171d
+      color: #f1bd1f
       font-weight: 500
       padding: 4px 8px
       text-decoration: none
-      text-transform: uppercase
+      text-transform: lowercase
 
       &:hover
-        background-color: $nav-button-inverted
-        color: $text-color-inverted
+        background-color: #1c2937
 
   .icon
     background: inherit
@@ -99,19 +97,17 @@
       height: 20px
       width: 20px
 
+  &.scrolled
+    background-color: #ffffff
+
+    .site-title
+      a
+        color: #ffffff
+
+
+
 .night
   .header
-    .main-nav
-      &.active
-        background-color: #10171d
-
-      a
-        color: #10171d
-
-        &:hover
-          background-color: #38444d
-          color: #ffffff
-
     &.scrolled
       background-color: #1c2937
 
@@ -123,7 +119,11 @@
 
       .site-title
         a
-          color: #ffffff
+          background-color: #ffffff
+          color: #1c2937
+
+          &:hover
+            background-color: #8899a5
 
       .icon
         &:hover
@@ -133,30 +133,24 @@
         svg
           fill: #8899a5
 
+    .main-nav
+      background-color: #15202a
+
+      a
+        color: #ffffff
+
+        &:hover
+          background-color: #1c2937
+
 
 @media screen and (min-width: 800px)
   .header
-    .burger
-      display: none
-
     .main-nav
-      background: transparent
-      display: flex
       flex-direction: row
-      height: inherit
-      justify-content: flex-start
-      left: inherit
-      opacity: 1
-      padding: 0
-      position: relative
-      top: inherit
-      width: inherit
-
-      &.active
-        background-color: transparent
+      flex-wrap: wrap
 
       a
-        color: #10171d
-        font-size: 1rem
-        font-weight: normal
-        margin: 0 .75rem 0 0
+        flex-basis: 50%
+        height: 50%
+        padding: calc(25vh - 32px) 0
+        width: 50%

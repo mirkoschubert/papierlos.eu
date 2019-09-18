@@ -1,6 +1,55 @@
 extends /base
 
 include /elements/hero
+include /elements/card
 
 block hero
   +hero('Software', 'So archivierst Du Deine Dokumente effizient!')
+
+block content
+  section.section.grid.with-spacing.cards
+    .container
+      +card({
+        title: 'Was ist ein DMS?',
+        excerpt: 'Ein Document Management System kann sowohl der Privatperson als auch ganzen Unternehmen den Zugriff auf die Dokumente erleichtern.',
+        to: '/software/was-ist-ein-dms/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Vergleichstest: Document Management Systems',
+        excerpt: 'Damit Du das richtige DMS für Deine Zwecke nutzen kannst, habe ich einige davon getestet und stelle Dir die Besonderheiten und Eigenschaften dieser Software vor.',
+        to: '/software/vergleichstest-document-management-systems/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'Belege richtig sammeln',
+        excerpt: 'Manch einer möchte die zahlreichen Belege und Rechnungen, die regelmäßig anfallen, gesondert für das Finanzamt sammeln.',
+        to: '/software/belege-richtig-sammeln/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
+      +card({
+        title: 'DIY Archivierung: Welche Software brauchst Du?',
+        excerpt: 'Wenn Du Dich nicht auf fertige DMS-Lösungen verlassen möchtest, kannst Du mit ein paar Programmen auch ein eigenes Archiv schaffen.',
+        to: '/software/diy-archivierung-software/',
+        image: {
+          slug: 'knowledge',
+          alt: 'Wissen',
+          author: 'Eliabe Costa',
+          url: 'https://unsplash.com/@eliabevces'
+        }
+      })
