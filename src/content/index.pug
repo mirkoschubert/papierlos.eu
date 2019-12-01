@@ -3,13 +3,16 @@ extends /templates/index
 include /atoms/button
 include /atoms/picture
 
+include /molecules/contents
+
 include /organisms/hero
 
 
 block hero
   +hero('full')
-    +title('Das papierlose Büro')
-    +subtitle('Raus mit den tätowierten Bäumen!')
+    +contents('Das papierlose Büro')
+    //-+title('Das papierlose Büro')
+    //-+subtitle('Raus mit den tätowierten Bäumen!')
     //-+description('blaboauhfmckj hahmcah f chlakhc ofuhsa fcuhas ofiuhc alfchas kfhjcg slafhfcua kjha sflhca flckhga fh khaf clakshf cahsf clhsadc flha lfckjhakls fcagsf askdjfha')
 
 block content
