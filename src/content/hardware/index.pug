@@ -1,12 +1,12 @@
 extends /base
 
+include /molecules/contents
 include /molecules/card
 include /organisms/hero
 
 block hero
   +hero()
-    +title('Hardware')
-    +subtitle('Scanner, Drucker, Speicherlösungen')
+    +contents('Hardware', 'Scanner, Drucker, Speicherlösungen')
 
 block content
   section.section.grid.with-spacing.cards

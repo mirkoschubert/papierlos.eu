@@ -1,11 +1,12 @@
 extends /base
 
 include /organisms/hero
+include /molecules/contents
+
 
 block hero
   +hero('golden-bottom')
-    +title('Impressum')
-    +subtitle('Anbieterkennzeichnung')
+    +contents('Impressum', 'Anbieterkennzeichnung')
 
 block content
   section.section

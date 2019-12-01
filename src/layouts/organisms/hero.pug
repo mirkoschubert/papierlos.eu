@@ -5,9 +5,9 @@ include /atoms/description
 mixin hero(size = 'medium', align = 'center')
   section(class='hero ' + size + ' ' + align)
     .container
-      .contents
-        if block
-          block
-        else
+      if block
+        block
+      else
+        .contents
           +title('Title')
           +subtitle('Subtitle')

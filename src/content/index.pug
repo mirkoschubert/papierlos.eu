@@ -10,10 +10,16 @@ include /organisms/hero
 
 block hero
   +hero('full')
-    +contents('Das papierlose Büro')
-    //-+title('Das papierlose Büro')
-    //-+subtitle('Raus mit den tätowierten Bäumen!')
-    //-+description('blaboauhfmckj hahmcah f chlakhc ofuhsa fcuhas ofiuhc alfchas kfhjcg slafhfcua kjha sflhca flckhga fh khaf clakshf cahsf clhsadc flha lfckjhakls fcagsf askdjfha')
+    +contents(
+      'Das papierlose Büro',
+      'Raus mit den tätowierten Bäumen!',
+      'Schluss mit Lustig! In unserem digitalen Zeitalter noch immer Papier verschwenden geht auf keine Kuhhaut. Wenn Du lieber Zeit sparen und ganz nebenbei die Umwelt schonen möchtest, bist Du hier genau richtig.',
+      '',
+      {
+        name: "Los geht's!",
+        to: '/wissen'
+      }
+    )
 
 block content
   section.section.grid.with-spacing

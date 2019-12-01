@@ -1,12 +1,12 @@
 extends /base
 
 include /organisms/hero
+include /molecules/contents
 include /molecules/card
 
 block hero
   +hero('golden-bottom')
-    +title('Services')
-    +subtitle('Dienstleister, die Dir das Leben vereinfachen')
+    +contents('Services', 'Dienstleister, die Dir das Leben vereinfachen')
 
 block content
   section.section.grid.with-spacing.cards

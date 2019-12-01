@@ -1,11 +1,11 @@
 extends /base
 
 include /organisms/hero
+include /molecules/contents
 
 block hero
   +hero('golden-bottom')
-    +title('Kontakt')
-    +subtitle('So erreichst Du uns!')
+    +contents('Kontakt', 'So erreichst Du uns!')
 
 block content
   section.section.grid.with-spacing

@@ -1,11 +1,19 @@
+include /atoms/tagline
 include /atoms/title
 include /atoms/subtitle
 include /atoms/description
 include /atoms/button
 
 
-mixin contents(title = 'Title', subtitle = 'Subtitle', description = 'Description', cta = { name: 'Buy now!', to: '/' } })
-  +title(title)
-  +subtitle(subtitle)
-  +description(description)
-  +button(cta.title, cta.to, true)
+mixin contents(title, subtitle, description, tagline, cta)
+  .contents
+    if tagline
+      +tagline(tagline)
+    if title
+      +title(title)
+    if subtitle
+      +subtitle(subtitle)
+    if description
+      +description(description)
+    if cta
+      +button(cta.name, cta.to, true)
