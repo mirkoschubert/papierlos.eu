@@ -1,17 +1,24 @@
 @import 'variables'
+@import 'mixins'
 @import 'typography'
 @import 'grid'
 
-// Components
-@import 'components/navbar'
-@import 'components/hero'
-@import 'components/footer'
+// Atoms
+@import 'atoms/title'
+@import 'atoms/subtitle'
+@import 'atoms/logo'
+@import 'atoms/icon'
+@import 'atoms/image'
+@import 'atoms/button'
 
-// Elements
-@import 'elements/image'
-@import 'elements/button'
-@import 'elements/toc'
+// Molecules
+@import 'molecules/nav'
+@import 'molecules/toc'
 
+// Organisms
+@import 'organisms/navbar'
+@import 'organisms/hero'
+@import 'organisms/footer'
 
 *,
 html
@@ -30,7 +37,27 @@ body
     background-color: #10171d
     color: #8899a5
 
-.left
+  .fixed.top ~ .site
+    margin-top: 60px
+
+  .fixed.bottom ~ .site
+    margin-bottom: 60px
+
+  .fixed.left ~ .site
+    margin-left: 60px
+
+  .fixed.right ~ .site
+    margin-right: 60px
+
+  .fixed.inline ~ .site
+    margin: 0
+
+  .site
+    display: flex
+    flex-direction: column
+
+
+.start
   justify-content: flex-start
   text-align: left
 
@@ -38,6 +65,23 @@ body
   justify-content: center
   text-align: center
 
-.right
+.end
   justify-content: flex-end
   text-align: right
+
+
+.site-title
+  font-size: 1.17rem
+  margin: 0
+
+  a
+    background-color: $blue-darker
+    border-radius: 2px
+    color: $yellow
+    font-weight: 500
+    padding: 4px 8px
+    text-decoration: none
+    text-transform: lowercase
+
+    &:hover
+      background-color: $blue-dark

@@ -1,9 +1,11 @@
 extends /base
 
-include /elements/hero
+include /organisms/hero
 
 block hero
-  +hero('Impressum', 'Anbieterkennzeichnung')
+  +hero('golden-bottom')
+    +title('Impressum')
+    +subtitle('Anbieterkennzeichnung')
 
 block content
   section.section

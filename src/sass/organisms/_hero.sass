@@ -1,0 +1,113 @@
+.hero
+  background-color: $yellow
+  display: flex
+  margin-bottom: 3em
+
+  &.onethird
+    height: calc(33.3333vh - #{$navbar-height}) // 215px
+
+  &.golden-top
+    height: calc(38.2vh - #{$navbar-height}) // 255px
+
+  &.small
+    height: calc(40vh - #{$navbar-height}) // 270px
+
+  &.medium
+    height: calc(60vh - #{$navbar-height}) // 435px
+
+  &.golden-bottom
+    height: calc(61.8vh - #{$navbar-height}) // 450px
+
+  &.twothirds
+    height: calc(66.6666vh - #{$navbar-height}) // 490px
+
+  &.large
+    height: calc(80vh - #{$navbar-height}) // 600px
+
+  &.full
+    height: calc(100vh - #{$navbar-height}) //
+
+    .container
+      position: relative
+
+      &::after
+        bottom: 0
+        color: $blue-light
+        content: '+'
+        display: block
+        font-size: 1.5em
+        padding-bottom: 1em
+        position: absolute
+
+  .container
+    align-items: center
+    display: flex
+    flex: 1
+
+    .contents
+      margin-top: -#{$navbar-height} // -60px
+
+  &.left
+    .container
+      justify-content: left
+      text-align: left
+
+  &.center
+    .container
+      justify-content: center
+      text-align: center
+
+  &.right
+    .container
+      justify-content: right
+      text-align: right
+
+.header.left + .site .hero,
+.header.right + .site .hero
+  .contents
+    margin-top: 0
+
+  &.onethird
+    height: 33.3333vh
+
+  &.golden-top
+    height: 38.2vh
+
+  &.small
+    height: 40vh
+
+  &.medium
+    height: 60vh
+
+  &.golden-bottom
+    height: 61.8vh
+
+  &.twothirds
+    height: 66.6666vh
+
+  &.large
+    height: 80vh
+
+  &.full
+    height: 100vh
+
+.horizontal
+  .hero
+    .container
+      &::after
+        bottom: inherit
+        padding-bottom: 0
+        padding-right: 1em
+        right: 0
+
+  .top + .site .hero .container::after,
+  .bottom + .site .hero .container::after
+    padding-bottom: $navbar-height
+
+.night
+  .hero
+    .title
+      color: $blue-dark
+
+    .subtitle
+      color: $blue-dark

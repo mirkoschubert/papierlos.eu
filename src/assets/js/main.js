@@ -1,30 +1,11 @@
-function setCookie (cname, cvalue, exdays) {
-  var d = new Date()
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))
-  var expires = 'expires=' + d.toUTCString()
-  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/'
-}
-
-function getCookie (cname) {
-  var name = cname + '='
-  var decodedCookie = decodeURIComponent(document.cookie)
-  var ca = decodedCookie.split(';')
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i]
-    while (c.charAt(0) === ' ') {
-      c = c.substring(1)
-    }
-    if (c.indexOf(name) === 0) {
-      return c.substring(name.length, c.length)
-    }
-  }
-  return undefined
-}
-
 $('body').ready(() => {
-  if (getCookie('display_mode') === 'night') {
+  if (localStorage.getItem('display_mode') === 'night') {
     $('body').addClass('night')
     $('.mode-icon use').attr('xlink:href', '/assets/icons/sprites.svg#day')
+    $('.mode-icon .title').html('Day Mode')
+    console.log('Website is in Night Mode!')
+  } else {
+    console.log('Website is in Day Mode!')
   }
 })
 
@@ -50,12 +31,15 @@ $(document).ready(() => {
     if ($('body').hasClass('night')) {
       $('.mode-icon use').attr('xlink:href', '/assets/icons/sprites.svg#night')
       $('body').removeClass('night')
-      setCookie('display_mode', 'day', 60)
+      $('.mode-icon .title').html('Day Mode')
+      localStorage.setItem('display_mode', 'day')
+      console.log('Website set to Day Mode!')
     } else {
-      console.log($('.mode-icon svg use').attr('xlink:href'))
       $('.mode-icon use').attr('xlink:href', '/assets/icons/sprites.svg#day')
       $('body').addClass('night')
-      setCookie('display_mode', 'night', 60)
+      $('.mode-icon .title').html('Night Mode')
+      localStorage.setItem('display_mode', 'night')
+      console.log('Website set to Night Mode!')
     }
   })
 })

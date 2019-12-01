@@ -1,10 +1,12 @@
 extends /base
 
-include /elements/hero
-include /elements/card
+include /organisms/hero
+include /molecules/card
 
 block hero
-  +hero('Wissen', 'Anleitungen zum digitalen Büro')
+  +hero('golden-bottom')
+    +title('Wissen')
+    +subtitle('Anleitungen zum digitalen Büro')
 
 block content
   section.section.grid.with-spacing.cards

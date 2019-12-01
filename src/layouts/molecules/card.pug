@@ -1,5 +1,8 @@
-include /elements/picture
-include /elements/button
+include /atoms/picture
+include /atoms/button
+
+//-
+  data = { title, excerpt, to, image { slug, alt, author, url } }
 
 mixin card(data)
   .item.card

@@ -1,3 +1,7 @@
+include /organisms/navbar
+include /organisms/hero
+include /organisms/footer
+
 doctype html
 html(lang='de')
   head
@@ -12,11 +16,13 @@ html(lang='de')
     script(src='/assets/js/main.js')
   body
     block header
-      include /components/navbar
-    block hero
-      include /elements/hero
-      +hero(site.title, site.description)
-    block content
-      h1 Title
-    block footer
-      include /components/footer
+      +navbar()
+    main.site
+      block hero
+        +hero(site.title, site.description)
+        
+      block content
+          h1 Title
+
+      block footer
+        +footer()

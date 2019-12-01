@@ -1,0 +1,13 @@
+include /atoms/logo
+include /atoms/icon
+include /molecules/nav
+
+mixin navbar(position = 'top', isfixed = true)
+  header(class='header' + (isfixed ? ' fixed ' : ' ') + position)
+    .row
+      .item.start.title
+        +logo()
+      nav.item.center.nav.main-nav
+        +nav()
+      .item.end.options
+        +icon('sprites.svg#night', 'Night Mode', 'mode-icon')

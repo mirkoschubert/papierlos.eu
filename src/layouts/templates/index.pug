@@ -1,0 +1,11 @@
+extends /base
+
+include /organisms/hero
+
+block hero
+  +hero('full')
+    +title(site.title)
+    +subtitle(site.description)
+
+block content
+  h1 Index

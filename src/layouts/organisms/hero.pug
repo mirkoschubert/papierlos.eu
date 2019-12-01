@@ -1,0 +1,13 @@
+include /atoms/title
+include /atoms/subtitle
+include /atoms/description
+
+mixin hero(size = 'medium', align = 'center')
+  section(class='hero ' + size + ' ' + align)
+    .container
+      .contents
+        if block
+          block
+        else
+          +title('Title')
+          +subtitle('Subtitle')

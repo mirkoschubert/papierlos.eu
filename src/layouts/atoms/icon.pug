@@ -1,0 +1,12 @@
+mixin icon(icon, title, classes, to)
+  a(role='button', title=title, class='icon ' + classes, href!=to)
+    svg
+      use(xlink:href='/assets/icons/' + icon)
+    span.title= title
+
+//-
+  icon:
+    icon: the icon used in /assets/icons
+    title: an optional title behind the icon
+    class: a class for this icon
+    to: a link

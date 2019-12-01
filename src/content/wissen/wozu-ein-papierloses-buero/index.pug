@@ -1,11 +1,13 @@
 extends /base
 
-include /elements/hero
-include /elements/picture
-include /elements/toc
+include /atoms/picture
+include /molecules/toc
+include /organisms/hero
 
 block hero
-  +hero('Wozu eigentlich ein papierloses Büro?', 'Nutzen, Vor- und Nachteile')
+  +hero('golden-top', 'left')
+    +title('Wozu eigentlich ein papierloses Büro?')
+    +subtitle('Nutzen, Vor- und Nachteile')
 
 block content
   section.grid.with-aside

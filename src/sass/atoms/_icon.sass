@@ -1,0 +1,71 @@
+// Icon Atom
+.icon
+  align-items: center
+  background-color: transparent
+  border-radius: 3px
+  display: flex
+  height: 32px
+  justify-content: flex-start
+  min-width: 32px
+  padding: 0
+  transition: background .3s ease
+  width: auto
+
+  svg
+    fill: $blue-dark
+    height: 32px
+    padding: 6px
+    transition: fill .3s ease
+    width: 32px
+
+  .title
+    color: $blue-dark
+    display: none
+    flex: 1
+    font-size: .825em
+    padding-right: 6px
+    transition: color .3s ease
+    white-space: nowrap
+
+  &.right
+    flex-direction: row-reverse
+    justify-content: flex-end
+
+    .title
+      margin-left: 0
+      margin-right: 6px
+
+  &.with-title
+    .title
+      display: block
+
+  &:hover
+    background-color: $blue-dark
+    cursor: pointer
+
+    .first
+      background-color: $blue-dark
+
+    svg
+      fill: $yellow
+
+    .title
+      color: $yellow
+
+.night
+  .icon
+    svg
+      fill: $white
+
+    .title
+      color: $white
+
+    &:hover
+      background-color: $yellow
+
+      svg
+        fill: $blue-dark
+
+      .title
+        color: $blue-dark
+

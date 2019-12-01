@@ -1,9 +1,11 @@
 extends /base
 
-include /elements/hero
+include /organisms/hero
 
 block hero
-  +hero('Kontakt', 'So erreichst Du uns!')
+  +hero('golden-bottom')
+    +title('Kontakt')
+    +subtitle('So erreichst Du uns!')
 
 block content
   section.section.grid.with-spacing

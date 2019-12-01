@@ -1,11 +1,16 @@
-extends /base
+extends /templates/index
 
-include /elements/hero
-include /elements/button
-include /elements/picture
+include /atoms/button
+include /atoms/picture
+
+include /organisms/hero
+
 
 block hero
-  +hero('Das papierlose Büro', 'Raus mit den tätowierten Bäumen!')
+  +hero('full')
+    +title('Das papierlose Büro')
+    +subtitle('Raus mit den tätowierten Bäumen!')
+    //-+description('blaboauhfmckj hahmcah f chlakhc ofuhsa fcuhas ofiuhc alfchas kfhjcg slafhfcua kjha sflhca flckhga fh khaf clakshf cahsf clhsadc flha lfckjhakls fcagsf askdjfha')
 
 block content
   section.section.grid.with-spacing

@@ -84,6 +84,54 @@
       margin: .75rem 0
 
 
+.horizontal
+  .site
+    flex-direction: row
+
+    .hero,
+    .section,
+    .footer
+      flex: 1 0 auto
+      height: calc(100vh - #{$navbar-height})
+      margin-bottom: 0
+      margin-top: 0
+      max-width: 100vw
+      overflow-x: scroll
+
+      &.onethird
+        width: 33.3333vw
+
+      &.golden-top
+        width: 38.2vw
+
+      &.small
+        width: 40vw
+
+      &.medium
+        width: 60vw
+
+      &.golden-bottom
+        width: 61.8vw
+
+      &.twothirds
+        width: 66.6666vw
+
+      &.large
+        width: 80vw
+
+      &.full
+        width: 100vw
+
+      .containter
+        align-items: center
+        padding: 0 1.5rem
+
+  .left ~ .site,
+  .right ~ .site
+      .hero,
+      .section,
+      .footer
+        height: 100vh
 
 .night
   .section
